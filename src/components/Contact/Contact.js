@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+// src/components/Contact/Contact.js
+import React from 'react';
 import { useInView } from 'react-intersection-observer';
-import { FaInstagram, FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaInstagram, FaWhatsapp, FaMapMarkerAlt } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
@@ -8,26 +9,6 @@ const Contact = () => {
     threshold: 0.1,
     triggerOnce: true
   });
-
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // You can add email service integration here
-  };
 
   return (
     <section id="contact" className="section contact" ref={ref}>
@@ -42,41 +23,31 @@ const Contact = () => {
         </div>
 
         <div className={`contact-content ${inView ? 'animate' : ''}`}>
-          <div className="contact-info">
-            <h3 className="info-title">Let's Connect</h3>
+          <div className="contact-info-full">
+            <h3 className="info-title gradient-text">Let's Connect</h3>
             <p className="info-description">
               Have questions? Want to book a free consultation? 
               Reach out through any of these channels:
             </p>
 
             <div className="contact-methods">
-              <a href="https://wa.me/1234567890" className="contact-method">
+              <a href="https://wa.me/917494940932" className="contact-method">
                 <div className="method-icon">
                   <FaWhatsapp />
                 </div>
                 <div className="method-details">
                   <h4>WhatsApp</h4>
-                  <p>+1 (234) 567-890</p>
+                  <p>+91 7494940932</p>
                 </div>
               </a>
 
-              <a href="https://instagram.com/superhuman_fitness" className="contact-method">
+              <a href="https://instagram.com/superhuman3366" className="contact-method">
                 <div className="method-icon">
                   <FaInstagram />
                 </div>
                 <div className="method-details">
                   <h4>Instagram</h4>
-                  <p>@superhuman_fitness</p>
-                </div>
-              </a>
-
-              <a href="mailto:info@superhuman.com" className="contact-method">
-                <div className="method-icon">
-                  <FaEnvelope />
-                </div>
-                <div className="method-details">
-                  <h4>Email</h4>
-                  <p>info@superhuman.com</p>
+                  <p>@superhuman3366</p>
                 </div>
               </a>
 
@@ -86,71 +57,29 @@ const Contact = () => {
                 </div>
                 <div className="method-details">
                   <h4>Location</h4>
-                  <p>Downtown Fitness Center</p>
+                  <p>KFG Sports Club, Sector 99A, Gurugram, India</p>
                 </div>
               </div>
             </div>
 
-            <div className="social-follow">
-              <p>Follow us for daily motivation and tips:</p>
-              <div className="social-buttons">
-                <a href="https://instagram.com/superhuman_fitness" 
+            <div className="contact-cta-section">
+              <h3>Start Your Transformation Today!</h3>
+              <p>Book your free consultation and take the first step towards a healthier, stronger you.</p>
+              <div className="contact-buttons">
+                <a href="https://wa.me/917494940932" 
                    target="_blank" 
                    rel="noopener noreferrer" 
-                   className="social-button">
-                  <FaInstagram /> Instagram
+                   className="btn btn-primary">
+                  <FaWhatsapp /> Chat on WhatsApp
                 </a>
-                <a href="https://wa.me/1234567890" 
+                <a href="https://instagram.com/superhuman3366" 
                    target="_blank" 
                    rel="noopener noreferrer" 
-                   className="social-button">
-                  <FaWhatsapp /> WhatsApp
+                   className="btn btn-secondary">
+                  <FaInstagram /> Follow on Instagram
                 </a>
               </div>
             </div>
-          </div>
-
-          <div className="contact-form-container">
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <h3 className="form-title">Send us a message</h3>
-              
-              <div className="form-group">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div className="form-group">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div className="form-group">
-                <textarea
-                  name="message"
-                  placeholder="Tell us about your fitness goals..."
-                  rows="5"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                ></textarea>
-              </div>
-
-              <button type="submit" className="btn btn-primary form-submit">
-                Send Message
-              </button>
-            </form>
           </div>
         </div>
       </div>

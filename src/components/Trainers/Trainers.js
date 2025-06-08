@@ -1,3 +1,4 @@
+// src/components/Trainers/Trainers.js
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
@@ -12,22 +13,22 @@ const Trainers = () => {
   const trainers = [
     {
       id: 1,
-      name: "Alex Johnson",
+      name: "Sumit Yadav",
       role: "Fitness & Resistance Training Expert",
       specialties: ["Athletic Performance", "Strength Training", "Fat Loss", "HIIT"],
       image: "https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=400&h=500&fit=crop",
-      instagram: "@alexjohnson_fitness",
-      whatsapp: "+1234567890",
+      instagram: "@superhuman3366",
+      whatsapp: "+917494940932",
       bio: "10+ years of experience transforming bodies and minds. Specialized in athletic performance and sustainable fat loss strategies."
     },
     {
       id: 2,
-      name: "Sarah Martinez",
+      name: "Dr. Bhuvika",
       role: "Certified Nutritionist",
       specialties: ["Meal Planning", "Sports Nutrition", "Weight Management", "Gut Health"],
       image: "https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400&h=500&fit=crop",
-      instagram: "@sarahnutrition",
-      whatsapp: "+1234567891",
+      instagram: "@superhuman3366",
+      whatsapp: "+917494940932",
       bio: "Passionate about creating sustainable nutrition plans that fuel your body and enhance your training results."
     }
   ];

@@ -1,3 +1,4 @@
+/* src/components/Header/Header.css */
 .header {
   position: fixed;
   top: 0;
@@ -27,10 +28,29 @@
 .logo {
   cursor: pointer;
   transition: var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .logo:hover {
   transform: scale(1.05);
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid transparent;
+  background: var(--gradient-primary);
+  padding: 2px;
+  transition: var(--transition-normal);
+}
+
+.logo:hover .logo-icon {
+  border-color: var(--primary-teal);
+  transform: rotate(360deg);
 }
 
 .logo-text {
@@ -83,6 +103,7 @@
   gap: 4px;
   cursor: pointer;
   padding: 5px;
+  z-index: 1001;
 }
 
 .mobile-menu-toggle span {
@@ -112,22 +133,26 @@
   
   .nav-links {
     position: fixed;
-    top: 70px;
+    top: 0;
     left: 0;
     right: 0;
+    bottom: 2;
     background: var(--bg-secondary);
     flex-direction: column;
-    padding: 2rem;
-    gap: 1.5rem;
-    transform: translateY(-100%);
-    opacity: 0;
+    padding: 5rem 2rem 2rem;
+    gap: 2rem;
+    transform: translateX(100%);
     transition: var(--transition-normal);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    justify-content: center;
   }
   
   .nav-links.mobile-open {
-    transform: translateY(0);
-    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .nav-links a {
+    font-size: 1.5rem;
+    text-align: center;
   }
   
   .nav-links a::after {
@@ -136,6 +161,16 @@
   
   .nav-cta {
     margin-left: 0;
-    width: 100%;
+    width: 80%;
+    max-width: 300px;
+  }
+  
+  .logo-text {
+    font-size: 1.2rem;
+  }
+  
+  .logo-icon {
+    width: 30px;
+    height: 30px;
   }
 }

@@ -1,5 +1,6 @@
+// src/components/Footer/Footer.js
 import React from 'react';
-import { FaInstagram, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
+import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
@@ -11,6 +12,7 @@ const Footer = () => {
 
   return (
     <footer className="footer">
+      <div className="footer-animation"></div>
       <div className="container">
         <div className="footer-content">
           <div className="footer-brand">
@@ -31,14 +33,17 @@ const Footer = () => {
           <div className="footer-social">
             <h4>Connect With Us</h4>
             <div className="social-icons">
-              <a href="https://instagram.com/superhuman_fitness" target="_blank" rel="noopener noreferrer">
+              <a href="https://instagram.com/superhuman3366" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 className="social-icon">
                 <FaInstagram />
               </a>
-              <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/917494940932" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 className="social-icon">
                 <FaWhatsapp />
-              </a>
-              <a href="mailto:info@superhuman.com">
-                <FaEnvelope />
               </a>
             </div>
           </div>

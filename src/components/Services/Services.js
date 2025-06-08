@@ -19,7 +19,7 @@ const Services = () => {
         "Progress tracking",
         "Flexible scheduling"
       ],
-      price: "Starting at $80/session",
+      price: "Starting at $200/month",
       popular: true
     },
     {
@@ -32,22 +32,10 @@ const Services = () => {
         "Weekly check-ins",
         "Recipe suggestions"
       ],
-      price: "Starting at $150/month"
+      price: "Starting at $100/month"
     },
     {
       id: 3,
-      title: "Transformation Package",
-      description: "Complete 12-week body transformation program combining training and nutrition",
-      features: [
-        "3x weekly training sessions",
-        "Full nutrition plan",
-        "24/7 support",
-        "Progress photos & measurements"
-      ],
-      price: "Starting at $1,200"
-    },
-    {
-      id: 4,
       title: "Athletic Performance",
       description: "Sport-specific training to enhance your athletic performance and prevent injuries",
       features: [

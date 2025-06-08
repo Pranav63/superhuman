@@ -121,3 +121,42 @@
     text-align: center;
   }
 }
+/* src/components/Footer/Footer.css - Add this animation */
+
+.footer-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--gradient-primary);
+  animation: footerGlow 3s ease-in-out infinite;
+}
+
+@keyframes footerGlow {
+  0%, 100% {
+    opacity: 0.5;
+    box-shadow: 0 0 10px rgba(124, 58, 237, 0.5);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.8);
+  }
+}
+
+.social-icon {
+  animation: iconPulse 2s ease-in-out infinite;
+  animation-delay: calc(var(--index) * 0.2s);
+}
+
+.social-icon:nth-child(1) { --index: 0; }
+.social-icon:nth-child(2) { --index: 1; }
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}

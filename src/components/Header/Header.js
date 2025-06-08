@@ -1,3 +1,4 @@
+// src/components/Header/Header.js
 import React, { useState, useEffect } from 'react';
 import './Header.css';
 
@@ -14,6 +15,18 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    // Close mobile menu on window resize
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -27,6 +40,7 @@ const Header = () => {
       <div className="container">
         <nav className="nav">
           <div className="logo" onClick={() => scrollToSection('hero')}>
+            <img src="/logo.png" alt="Super Human" className="logo-icon" />
             <span className="logo-text gradient-text">SUPER HUMAN</span>
           </div>
           
@@ -35,7 +49,12 @@ const Header = () => {
             <a onClick={() => scrollToSection('trainers')}>Trainers</a>
             <a onClick={() => scrollToSection('services')}>Services</a>
             <a onClick={() => scrollToSection('contact')}>Contact</a>
-            <button className="btn btn-primary nav-cta">Get Started</button>
+            <button 
+              className="btn btn-primary nav-cta"
+              onClick={() => scrollToSection('contact')}
+            >
+              Get Started
+            </button>
           </div>
           
           <div 

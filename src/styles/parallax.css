@@ -1,0 +1,55 @@
+/* src/styles/parallax.css */
+
+/* Performance optimizations for parallax */
+.parallax-element {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Smooth scrolling for better parallax */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reduce parallax on mobile for performance */
+@media (max-width: 768px) {
+  .parallax-element {
+    transform: none !important;
+  }
+  
+  .parallax-video,
+  .parallax-image,
+  .parallax-decoration {
+    transform: none !important;
+  }
+}
+
+/* Parallax container styles */
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+/* Layer-based parallax */
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.parallax-layer--back {
+  transform: translateZ(-1px) scale(2);
+}
+
+.parallax-layer--base {
+  transform: translateZ(0);
+}
+
+.parallax-layer--front {
+  transform: translateZ(1px);
+}
