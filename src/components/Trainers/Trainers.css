@@ -1,0 +1,162 @@
+.trainers {
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.section-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-top: var(--spacing-sm);
+}
+
+.trainers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-lg);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.trainers-grid.animate .trainer-card {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.trainer-card {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition-normal);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.trainer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.2);
+  border-color: rgba(124, 58, 237, 0.3);
+}
+
+.trainer-image {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.trainer-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-slow);
+}
+
+.trainer-card:hover .trainer-image img {
+  transform: scale(1.1);
+}
+
+.trainer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.8) 100%);
+  opacity: 0;
+  transition: var(--transition-normal);
+  display: flex;
+  align-items: flex-end;
+  padding: var(--spacing-md);
+}
+
+.trainer-card:hover .trainer-overlay {
+  opacity: 1;
+}
+
+.social-links {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  transition: var(--transition-fast);
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background: var(--gradient-primary);
+  transform: translateY(-3px);
+}
+
+.trainer-info {
+  padding: var(--spacing-md);
+}
+
+.trainer-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.trainer-role {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+}
+
+.trainer-bio {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-sm);
+  font-size: 0.95rem;
+}
+
+.trainer-specialties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.specialty-tag {
+  background: var(--bg-card);
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition-fast);
+}
+
+.specialty-tag:hover {
+  border-color: var(--primary-teal);
+  color: var(--primary-teal);
+}
+
+.trainer-cta {
+  margin-top: auto;
+}
+
+.trainer-cta .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .trainers-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+}

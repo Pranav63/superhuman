@@ -1,0 +1,126 @@
+.services {
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.services::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -25%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.services-grid.animate .service-card {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.service-card {
+  background: var(--bg-tertiary);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  position: relative;
+  transition: var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(124, 58, 237, 0.3);
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.1);
+}
+
+.service-card.popular {
+  border-color: rgba(124, 58, 237, 0.3);
+  background: linear-gradient(135deg, var(--bg-tertiary) 0%, rgba(124, 58, 237, 0.05) 100%);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: var(--gradient-primary);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-primary);
+}
+
+.service-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+  flex-grow: 1;
+}
+
+.service-features {
+  list-style: none;
+  margin-bottom: var(--spacing-md);
+}
+
+.service-features li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.feature-icon {
+  color: var(--primary-teal);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.service-footer {
+  margin-top: auto;
+  padding-top: var(--spacing-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.service-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+}
+
+.service-btn {
+  width: 100%;
+}
+
+.services-cta {
+  margin-top: var(--spacing-xl);
+}
+
+.cta-text {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}

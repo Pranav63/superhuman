@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
 import './App.css';
+import './styles/globals.css';
+import './styles/variables.css';
+import Header from './components/Header/Header';
+import Hero from './components/Hero/Hero';
+import About from './components/About/About';
+import Trainers from './components/Trainers/Trainers';
+import Services from './components/Services/Services';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 
 function App() {
+  useEffect(() => {
+    // Smooth scroll behavior
+    document.documentElement.style.scrollBehavior = 'smooth';
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Hero />
+      <About />
+      <Trainers />
+      <Services />
+      <Contact />
+      <Footer />
     </div>
   );
 }
