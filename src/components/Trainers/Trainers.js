@@ -15,7 +15,7 @@ const Trainers = () => {
       id: 1,
       name: "Sumit Yadav",
       role: "Fitness & Resistance Training Expert",
-      specialties: ["Athletic Performance", "Strength Training", "Fat Loss", "HIIT"],
+      specialties: ["Sport-Focused Training", "Strength Training", "Fat Loss", "HIIT"],
       image: "https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=400&h=500&fit=crop",
       instagram: "@superhuman3366",
       whatsapp: "+917494940932",
@@ -23,7 +23,7 @@ const Trainers = () => {
     },
     {
       id: 2,
-      name: "Dr. Bhuvika",
+      name: "Mrs. Bhumika",
       role: "Certified Nutritionist",
       specialties: ["Meal Planning", "Sports Nutrition", "Weight Management", "Gut Health"],
       image: "https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400&h=500&fit=crop",

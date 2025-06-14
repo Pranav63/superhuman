@@ -30,7 +30,7 @@
   transition: var(--transition-fast);
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem; /* Increased from 0.75rem */
 }
 
 .logo:hover {
@@ -38,8 +38,8 @@
 }
 
 .logo-icon {
-  width: 40px;
-  height: 40px;
+  width: 60px; /* Increased from 40px */
+  height: 60px; /* Increased from 40px */
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid transparent;
@@ -54,9 +54,10 @@
 }
 
 .logo-text {
-  font-size: 1.5rem;
+  font-size: 1.8rem; /* Increased from 1.5rem */
   font-weight: 800;
   letter-spacing: -0.02em;
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
 .nav-links {
@@ -166,11 +167,11 @@
   }
   
   .logo-text {
-    font-size: 1.2rem;
+    font-size: 1.4rem; /* Increased from 1.2rem */
   }
   
   .logo-icon {
-    width: 30px;
-    height: 30px;
+    width: 45px; /* Increased from 30px */
+    height: 45px; /* Increased from 30px */
   }
 }

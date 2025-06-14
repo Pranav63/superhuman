@@ -40,7 +40,7 @@ const Header = () => {
       <div className="container">
         <nav className="nav">
           <div className="logo" onClick={() => scrollToSection('hero')}>
-            <img src="/logo.png" alt="Super Human" className="logo-icon" />
+            <img src="/superhumanlogo.png" alt="Super Human" className="logo-icon" />
             <span className="logo-text gradient-text">SUPER HUMAN</span>
           </div>
           
